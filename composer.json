@@ -1,0 +1,48 @@
+{
+    "name": "angeli/admin",
+    "type": "library",
+    "description": "Simple package test",
+    "keywords": [
+        "admin"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marija",
+            "email": ":marija@gmail.com",
+            "homepage": "https://www.marja.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.1",
+        "php" : ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=5.4.3",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Angeli\\Admin\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Angeli\\Admin\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers":[
+                "Angeli\\Admin\\AdminServiceProvider"
+            ],
+            "aliases":{
+                "Admin":"Angeli\\Admin\\AngeliFacade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
