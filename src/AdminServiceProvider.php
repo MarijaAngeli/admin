@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 class AdminServiceProvider extends ServiceProvider
 {
+    protected $defer = false;
     /**
      * Perform post-registration booting of services.
      *
@@ -23,6 +24,12 @@ class AdminServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/migrations' => database_path('migrations')
         ], 'migrations');
+        $this->publishes([
+            __DIR__.'/../config/angeli.php' => config_path('angeli.php')
+        ], 'angeli');
+        $this->publishes([
+            __DIR__.'/controllers' => base_path('/app/Http/Controllers')
+        ], 'controllers');
     }
 
     /**
@@ -32,6 +39,8 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind('admin', function($app){
+            return new Admin($app);
+        });
     }
 }

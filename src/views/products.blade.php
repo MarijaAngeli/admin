@@ -7,7 +7,7 @@
 <body>
     <ul>
         @foreach($products as $product)
-            <li style="background: blueviolet; color: #5a6268;">{{ $product->name }} - {{$product->price}}</li>
+            <li style="background: blueviolet; color: whitesmoke;">{{ $product->name }} - {{$product->price}}</li>
         @endforeach
     </ul>
 </body>
