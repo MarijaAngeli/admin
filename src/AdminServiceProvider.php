@@ -25,11 +25,12 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__.'/migrations' => database_path('migrations')
         ], 'migrations');
         $this->publishes([
-            __DIR__.'/../config/angeli.php' => config_path('angeli.php')
-        ], 'angeli');
+            __DIR__ . '/../config/admin.php' => config_path('admin.php')
+        ], 'admin');
         $this->publishes([
-            __DIR__.'/controllers' => base_path('/app/Http/Controllers')
+            __DIR__.'/Http/Controllers' => base_path('/app/Http/Controllers')
         ], 'controllers');
+
     }
 
     /**
@@ -42,5 +43,7 @@ class AdminServiceProvider extends ServiceProvider
         $this->app->bind('admin', function($app){
             return new Admin($app);
         });
+
+        $this->app->alias("admin", "Angeli\Admin\Admin");
     }
 }

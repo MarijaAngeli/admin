@@ -10,3 +10,4 @@ Route::get('products', 'ProductController@index');
 Route::get('test', function (){
     echo "Hello";
 });
+

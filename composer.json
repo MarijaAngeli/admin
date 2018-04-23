@@ -9,7 +9,7 @@
     "authors": [
         {
             "name": "Marija",
-            "email": ":marija@gmail.com",
+            "email": "marija@gmail.com",
             "homepage": "https://www.marja.com",
             "role": "Developer"
         }
@@ -18,7 +18,7 @@
         "php" : ">=7.0"
     },
     "require-dev": {
-        "phpunit/phpunit" : ">=5.4.3",
+        "phpunit/phpunit" : ">=5.4.3"
     },
     "autoload": {
         "psr-4": {

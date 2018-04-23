@@ -12,4 +12,9 @@ class Admin
     {
         $this->app = $app;
     }
+
+    public function runTest()
+    {
+        return Config::get('admin.test');
+    }
 }
