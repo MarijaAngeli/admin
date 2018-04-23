@@ -28,7 +28,7 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__ . '/../config/admin.php' => config_path('admin.php')
         ], 'admin');
         $this->publishes([
-            __DIR__.'/Http/Controllers' => base_path('/app/Http/Controllers')
+            __DIR__.'/Http/Controllers' => base_path('app/Http/Controllers')
         ], 'controllers');
 
     }

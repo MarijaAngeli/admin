@@ -36,7 +36,7 @@
                 "Angeli\\Admin\\AdminServiceProvider"
             ],
             "aliases":{
-                "Admin":"Angeli\\Admin\\AngeliFacade"
+                "Admin":"Angeli\\Admin\\AdminFacade"
             }
         }
     },
