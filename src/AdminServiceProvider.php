@@ -40,6 +40,7 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->make('Angeli\Admin\Http\Controllers\ProductController');
         $this->app->bind('admin', function($app){
             return new Admin($app);
         });

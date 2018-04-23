@@ -7,7 +7,7 @@
 
 Route::get('products', 'ProductController@index');
 
-Route::get('test', function (){
+Route::get('products', function (){
     echo "Hello";
 });
 
