@@ -11,6 +11,6 @@ namespace Angeli\Admin\Http\Controllers;
 Route::get('products', 'ProductController@index');
 
 Route::get('test', function (){
-    echo "Hello";
+    echo "Hello World";
 });
 
