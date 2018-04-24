@@ -1,6 +1,6 @@
 <?php
 
-namespace Angeli\Admin\Http\Controllers;
+namespace Angeli\Admin;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;

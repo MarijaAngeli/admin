@@ -1,5 +1,4 @@
 <?php
-namespace Angeli\Admin\Http\Controllers;
 
 //Route::get('products', function (){
 //    $products = DB::select("SELECT * FROM products");
@@ -8,7 +7,7 @@ namespace Angeli\Admin\Http\Controllers;
 
 
 
-Route::get('products', 'ProductController@index');
+Route::get('products', 'Angeli\Admin\ProductController@index');
 
 Route::get('test', function (){
     echo "Hello World";
